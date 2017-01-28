@@ -7,16 +7,8 @@ Unziped and saved in the working directory with the inner folder named "UCI HAR 
 The file run_analysis.R is divided in the steps suggested in the project infos:
 
 1- First a preparation was done the needed data are read using read.table, the following tables were used:
-activity_labels
-features
-
-X_train
-y_train
-subject_train
-
-X_test
-y_test
-subject_test
+activity_labels; features; X_train; y_train
+subject_train ; X_test ; y_test ; subject_test
 
 2- Data from each group Train and Test were combined with the list of subject and activity, separetely 
 
