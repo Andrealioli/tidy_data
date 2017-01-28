@@ -1,4 +1,4 @@
-
+library('dplyr')
 #reading files Labels and Features
 file_path_labels <- paste(getwd(), paste("activity_labels", ".txt", sep=""), sep="/")
 act_labels <- read.table(file_path_labels)
@@ -49,9 +49,9 @@ colnames(merged_dt_sub)[2:80] <-c(as.character(feature_mean_std$V2))
 
 #Step 5 From the data set in step 4, creates a second, independent tidy data set
 #with the average of each variable for each activity and each subject.
-tidy_data <- merged_dt_sub[, -c(1,81)]
-colnames(tidy_data)[80]<- c("Activity")
-agg_tidy_data <- aggregate(.~Activity, data= tidy_data, FUN="mean")
+tidy_data <- merged_dt_sub[, -c(1)]
+colnames(tidy_data)[80:81]<- c("Subject", "Activity")
+agg_tidy_data <- aggregate(.~Activity + Subject, data= tidy_data, FUN="mean")
 
 #Saving the tidy file
 write.table(agg_tidy_data,paste(getwd(), "agg_tidy_data.txt", sep="/"))
