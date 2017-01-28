@@ -1,4 +1,6 @@
 library('dplyr')
+
+
 #reading files Labels and Features
 file_path_labels <- paste(getwd(), paste("activity_labels", ".txt", sep=""), sep="/")
 act_labels <- read.table(file_path_labels)
