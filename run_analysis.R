@@ -2,12 +2,12 @@
 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
 #Create a subdirectory called data and download the file
-dir.create("./data_project")
-download.file(url,destfile="./data_project/Dataset.zip")
+dir.create("./data")
+download.file(url,destfile="./data/Dataset.zip")
 #Loading in the data files
-unzip("./data_project/Dataset.zip",exdir="./data_project")
+unzip("./data/Dataset.zip",exdir="./data")
 #Setting work directory
-setwd("~/data_project/UCI HAR Dataset")
+setwd("~/data/UCI HAR Dataset")
   
 library('dplyr')
 
