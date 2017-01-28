@@ -1,12 +1,13 @@
 # tidy_data
 Project
 This project is part of the Coursera "Getting and Cleaning Data Course"
-The folder with the data was download in this link https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-Unziped and saved in the working directory with the inner folder named "UCI HAR Dataset" the working directory was configured to work directly with this folder.
+
 
 The file run_analysis.R is divided in the steps suggested in the project infos:
 
-1- First a preparation was done the needed data are read using read.table, the following tables were used:
+1- First the folder with the data was download in this link https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Unziped and saved in the working directory called data_project, with the inner folder named "UCI HAR Dataset" the working directory was configured to work directly with this folder.
+The following tables were read, using read.table:
 activity_labels; features; X_train; y_train
 subject_train ; X_test ; y_test ; subject_test
 
