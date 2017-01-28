@@ -1,5 +1,15 @@
-library('dplyr')
+# downloading and unziping file
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 
+#Create a subdirectory called data and download the file
+dir.create("./data_project")
+download.file(url,destfile="./data_project/Dataset.zip")
+#Loading in the data files
+unzip("./data_project/Dataset.zip",exdir="./data_project")
+#Setting work directory
+setwd("~/data_project/UCI HAR Dataset")
+  
+library('dplyr')
 
 #reading files Labels and Features
 file_path_labels <- paste(getwd(), paste("activity_labels", ".txt", sep=""), sep="/")
