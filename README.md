@@ -6,7 +6,7 @@ Unziped and saved in the working directory with the inner folder named "UCI HAR 
 
 The file run_analysis.R is divided in the steps suggested in the project infos:
 
-1- First a preparation was done the needed data are read using read.table
+1- First a preparation was done the needed data are read using read.table, the following tables were used:
 activity_labels
 features
 
@@ -50,7 +50,7 @@ feature_std: the features that are standard deviations values of variables consi
 feature_mean_std: binded rows of the valueas filtered above (i.e. feature_mean and feature_std)
 merged_dt_sub: mean and standard deviation variables selected from merged_dt_sub using feature_mean_std, and merged with the name of the activities (i.e. act_labels)
 tidy_data: merged_dt_sub with correct names of variables and without unecessary columns
-agg_tidy_data <- tidy data aggregate by activity and calculated the mean value of the variables
+agg_tidy_data: tidy data aggregate by activity and subject, then the mean was calculated for each variable
 
 
 
